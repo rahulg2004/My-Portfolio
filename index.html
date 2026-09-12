@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Fixed Scroll Animation Canvas Background -->
+  <div class="canvas-container">
+    <canvas id="animation-canvas"></canvas>
+  </div>
+
+  <!-- Main Scrollable Content Overlay -->
+  <div id="content-wrapper">
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">
+          <img src="assets/logo.jpg" alt="Rahul Gupta" class="logo-avatar" />
+          <span class="logo-text">Rahul Gupta</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="education.html" class="nav-link">Education</a>
+          <a href="experience.html" class="nav-link">Experience</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="certificates.html" class="nav-link">Certificates</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="assets/Rahul_Gupta_Resume.pdf" download="Rahul_Gupta_Resume.pdf" class="btn-cv">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <!-- Left Column: Intro -->
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            B.Sc. (Hons) CS &bull; Keshav Mahavidyalaya, DU
+          </div>
+
+          <h1 class="hero-title">
+            I build scalable <span class="highlight-cyan">AI & software</span> solutions.
+          </h1>
+
+          <p class="hero-desc">
+            I'm <strong>Rahul Gupta</strong>, a CS student at University of Delhi & Generative AI developer with 8+
+            professional internships and roles across applied AI, C++ systems, and digital media leadership.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="projects.html" class="btn btn-primary">
+              View My Work
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="experience.html" class="btn btn-secondary">
+              View Experience
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/rg-rr2004" target="_blank" rel="noopener" class="social-icon-btn"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="mailto:rahulgupta18062004@gmail.com" class="social-icon-btn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right / Floating Hero Badges (Framing the animation canvas subject) -->
+        <div class="hero-floating-stage">
+          <div class="floating-badge badge-top-right">
+            <div class="badge-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="badge-val">8+</div>
+              <div class="badge-lbl">Internships &<br>Roles</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-mid-right">
+            <div class="badge-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="badge-val">1.5M+</div>
+              <div class="badge-lbl">Digital Views<br>& Reach</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-lower-right">
+            <div class="badge-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+            </div>
+            <div>
+              <div class="badge-val">13K+</div>
+              <div class="badge-lbl">YouTube<br>Community</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-pill">
+            <div class="code-bracket-icon">&lt;/&gt;</div>
+            <div class="pill-items">
+              <span>Agentic AI</span>
+              <span class="sep">•</span>
+              <span>C++ Systems</span>
+              <span class="sep">•</span>
+              <span>Full Stack</span>
+            </div>
+            <span class="status-dot green-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Skills Section -->
+    <section class="section" id="about">
+      <div class="container grid-2col">
+        <!-- About Card -->
+        <div class="glass-card about-card">
+          <div class="card-header">
+            <span class="header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </span>
+            <h2 class="card-title">About Me</h2>
+          </div>
+
+          <p class="about-text">
+            Third-year B.Sc. (Hons) Computer Science student at <strong>Keshav Mahavidyalaya, University of
+              Delhi</strong> focused on Generative AI, cybersecurity, and software development. Hands-on experience
+            across multiple internships in AI, data science, and C++ programming, alongside 3+ years creating digital
+            media with 1.5M+ reach.
+          </p>
+
+          <div class="meta-grid">
+            <div class="meta-item">
+              <span class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <div>
+                <span class="meta-label">Name</span>
+                <span class="meta-val">Rahul Gupta</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div>
+                <span class="meta-label">Location</span>
+                <span class="meta-val">Rohini, Delhi, India</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <div>
+                <span class="meta-label">Email</span>
+                <span class="meta-val">rahulgupta18062004@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <span class="meta-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <div>
+                <span class="meta-label">Availability</span>
+                <span class="meta-val highlight-green">
+                  <span class="status-dot green-dot"></span> Open to Opportunities
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <a href="experience.html" class="btn btn-outline">
+            Explore Full Journey
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Skills Card -->
+        <div class="glass-card skills-card" id="skills">
+          <div class="card-header">
+            <span class="header-icon">&lt;/&gt;</span>
+            <h2 class="card-title">Technical Expertise</h2>
+          </div>
+
+          <div class="skills-list">
+            <div class="skill-row">
+              <div class="skill-info">
+                <span class="skill-name">Generative AI & Agentic Workflows</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <span class="skill-name">Python & Machine Learning</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <span class="skill-name">C++ & Algorithmic Systems</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <span class="skill-name">Full-Stack Web (HTML/CSS/JS)</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <span class="skill-name">Data Visualisation & Analytics</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <span class="skill-name">Cybersecurity & Data Privacy</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Snapshot Section -->
+    <section class="section" id="experience-preview">
+      <div class="container">
+        <div class="section-title-bar">
+          <div class="section-heading-group">
+            <span class="header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </span>
+            <h2 class="card-title">Professional Experience</h2>
+          </div>
+          <a href="experience.html" class="link-cyan">
+            View All 8 Roles &rarr;
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Role 1 -->
+          <div class="glass-card project-card">
+            <div class="card-mini-badge">Aug 2026 – Present</div>
+            <h3 class="project-title" style="margin-top: 10px;">Generative AI Intern</h3>
+            <div class="meta-label" style="color: var(--cyan-accent); margin-bottom: 10px;">Decodelabs &bull; Delhi
+            </div>
+            <p class="project-desc">Building applied generative AI workflows, autonomous agent systems, and modern LLM
+              tool integrations.</p>
+            <div class="tech-tags" style="margin-top: auto;">
+              <span class="tech-tag">Generative AI</span>
+              <span class="tech-tag">Agentic AI</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="glass-card project-card">
+            <div class="card-mini-badge">Aug 2026 – Present</div>
+            <h3 class="project-title" style="margin-top: 10px;">C++ Programming Intern</h3>
+            <div class="meta-label" style="color: var(--cyan-accent); margin-bottom: 10px;">Thiranex EduTech LLP</div>
+            <p class="project-desc">Strengthening algorithmic problem solving, data structures, and memory-efficient C++
+              implementations.</p>
+            <div class="tech-tags" style="margin-top: auto;">
+              <span class="tech-tag">C++20</span>
+              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">Verified THX</span>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="glass-card project-card">
+            <div class="card-mini-badge">Apr 2023 – Present</div>
+            <h3 class="project-title" style="margin-top: 10px;">Digital Content Creator</h3>
+            <div class="meta-label" style="color: var(--cyan-accent); margin-bottom: 10px;">Sanatan Studios (YouTube)
+            </div>
+            <p class="project-desc">Scaled channel to 13K+ subscribers and 1.5M+ total views with end-to-end research,
+              scripting, and SEO.</p>
+            <div class="tech-tags" style="margin-top: auto;">
+              <span class="tech-tag">13K+ Subs</span>
+              <span class="tech-tag">1.5M+ Views</span>
+              <span class="tech-tag">YouTube SEO</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+          <a href="experience.html" class="btn btn-outline">
+            Explore All Experience & Internships &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work Section: Data Alcott Systems -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-title-bar">
+          <div class="section-heading-group">
+            <span class="header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </span>
+            <h2 class="card-title">Featured Projects</h2>
+          </div>
+          <a href="projects.html" class="link-cyan">
+            View All 20 Projects
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: AI Resume Reviewer & Rewriter -->
+          <div class="glass-card project-card">
+            <div class="project-thumb-container">
+              <img src="assets/projects/data_alcott_resume_reviewer.jpg" alt="AI Resume Reviewer & ATS Analyzer"
+                class="project-thumb" />
+              <span class="project-tag-badge">
+                <span class="status-dot green-dot"></span> NLP &amp; ATS AI
+              </span>
+            </div>
+            <div class="project-details">
+              <div class="meta-label"
+                style="color: var(--cyan-accent); margin-bottom: 6px; font-size: 0.76rem; font-weight: 600;">Data Alcott
+                Systems &bull; Project 4</div>
+              <h3 class="project-title">AI Resume Reviewer &amp; Rewriter</h3>
+              <p class="project-desc">AI &amp; NLP-based utility analyzing PDF resumes to evaluate ATS compatibility,
+                extract technical skills, calculate section scores, and generate automated improvement recommendations.
+              </p>
+              <div class="tech-tags" style="margin-bottom: 14px;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLTK</span>
+                <span class="tech-tag">PyPDF2</span>
+                <span class="tech-tag">ATS Scoring</span>
+                <span class="tech-tag">Streamlit</span>
+              </div>
+              <div class="project-meta-bottom">
+                <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-4-AI-Resume-Reviewer-rahulgupta"
+                  target="_blank" rel="noopener" class="link-cyan"
+                  style="font-size: 0.82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub Code
+                </a>
+                <a href="projects.html" class="project-arrow-btn" aria-label="View Project in Projects Catalog"
+                  title="View in Projects Catalog">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Recommendation Engine -->
+          <div class="glass-card project-card">
+            <div class="project-thumb-container">
+              <img src="assets/projects/data_alcott_recommendation_engine.jpg"
+                alt="Student Internship Recommendation Engine" class="project-thumb" />
+              <span class="project-tag-badge">
+                <span class="status-dot green-dot"></span> Machine Learning
+              </span>
+            </div>
+            <div class="project-details">
+              <div class="meta-label"
+                style="color: var(--cyan-accent); margin-bottom: 6px; font-size: 0.76rem; font-weight: 600;">Data Alcott
+                Systems &bull; Project 2</div>
+              <h3 class="project-title">Internship Recommendation Engine</h3>
+              <p class="project-desc">Intelligent recommendation system combining Collaborative Filtering and TF-IDF
+                Content-Based Filtering into a weighted hybrid algorithm with Cosine Similarity and Precision@K
+                evaluation.</p>
+              <div class="tech-tags" style="margin-bottom: 14px;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Cosine Similarity</span>
+                <span class="tech-tag">TF-IDF</span>
+                <span class="tech-tag">Streamlit</span>
+              </div>
+              <div class="project-meta-bottom">
+                <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-2-Recommendation-Engine-rahulgupta"
+                  target="_blank" rel="noopener" class="link-cyan"
+                  style="font-size: 0.82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub Code
+                </a>
+                <a href="projects.html" class="project-arrow-btn" aria-label="View Project in Projects Catalog"
+                  title="View in Projects Catalog">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: AI Project Topic Recommender -->
+          <div class="glass-card project-card">
+            <div class="project-thumb-container">
+              <img src="assets/projects/data_alcott_topic_recommender.jpg" alt="AI Project Topic Recommender"
+                class="project-thumb" />
+              <span class="project-tag-badge">
+                <span class="status-dot green-dot"></span> NLP Matching
+              </span>
+            </div>
+            <div class="project-details">
+              <div class="meta-label"
+                style="color: var(--cyan-accent); margin-bottom: 6px; font-size: 0.76rem; font-weight: 600;">Data Alcott
+                Systems &bull; Project 3</div>
+              <h3 class="project-title">AI Project Topic Recommender</h3>
+              <p class="project-desc">Personalized academic discovery engine matching students with engineering project
+                topics based on technical skills, difficulty levels, duration, and TF-IDF text vector analysis.</p>
+              <div class="tech-tags" style="margin-bottom: 14px;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">TF-IDF</span>
+                <span class="tech-tag">Scikit-Learn</span>
+                <span class="tech-tag">Streamlit</span>
+              </div>
+              <div class="project-meta-bottom">
+                <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-3-AI-Project-Topic-Recommender-rahulgupta"
+                  target="_blank" rel="noopener" class="link-cyan"
+                  style="font-size: 0.82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  GitHub Code
+                </a>
+                <a href="projects.html" class="project-arrow-btn" aria-label="View Project in Projects Catalog"
+                  title="View in Projects Catalog">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Snapshot Section -->
+    <section class="section" id="certificates-preview">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <div class="meta-label">Certifications</div>
+            <h2 class="card-title">Certificates & Credentials</h2>
+          </div>
+          <a href="certificates.html" class="link-cyan">
+            View All 45+ Credentials &rarr;
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Cert 1: Google AI Essentials Specialization -->
+          <div class="glass-card project-card">
+            <div class="cert-image-container" style="height: 160px; margin-bottom: 12px;">
+              <img src="assets/certificates/google_ai_essentials_specialization.jpg"
+                alt="Google AI Essentials Specialization" class="cert-preview-img" />
+            </div>
+            <div class="card-mini-badge">Google AI Specialization (5 Courses)</div>
+            <h3 class="project-title" style="margin-top: 6px; font-size: 1.05rem;">Google AI Essentials Specialization
+            </h3>
+            <div class="meta-label" style="color: var(--cyan-accent); margin-bottom: 8px;">Google (Coursera Verified)
+            </div>
+            <p class="project-desc" style="font-size: 0.84rem;">Comprehensive 5-course certification covering AI
+              principles, prompt engineering, productivity tools, and responsible AI deployment.</p>
+            <div
+              style="margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+              <a href="certificates.html" class="cert-link">Explore in Catalog &rarr;</a>
+              <a href="https://coursera.org/verify/specialization/8S1U82QQWOPB" target="_blank"
+                rel="noopener noreferrer"
+                style="font-size: 0.78rem; color: var(--cyan-accent); text-decoration: none; font-weight: 600;">Verify
+                &nearr;</a>
+            </div>
+          </div>
+
+          <!-- Cert 2: Google Cloud AI -->
+          <div class="glass-card project-card">
+            <div class="cert-image-container" style="height: 160px; margin-bottom: 12px;">
+              <img src="assets/certificates/google_cloud_innovating_ai.png" alt="Google Cloud AI"
+                class="cert-preview-img" />
+            </div>
+            <div class="card-mini-badge">Google Cloud Completion Badge</div>
+            <h3 class="project-title" style="margin-top: 6px; font-size: 1.05rem;">Innovating with Google Cloud AI</h3>
+            <div class="meta-label" style="color: var(--cyan-accent); margin-bottom: 8px;">Google Cloud Verified</div>
+            <p class="project-desc" style="font-size: 0.84rem;">Mastery in leveraging enterprise Google Cloud AI
+              infrastructure and Vertex AI models.</p>
+            <div style="margin-top: auto; padding-top: 10px;">
+              <a href="certificates.html" class="cert-link">Explore in Catalog &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Cert 3: TCS iON AI Foundation -->
+          <div class="glass-card project-card">
+            <div class="cert-image-container" style="height: 160px; margin-bottom: 12px;">
+              <img src="assets/certificates/tcs_ion_ai_foundation.jpg" alt="TCS iON AI Foundation"
+                class="cert-preview-img" />
+            </div>
+            <div class="card-mini-badge">ID: 279243-33272935-1016</div>
+            <h3 class="project-title" style="margin-top: 6px; font-size: 1.05rem;">TCS iON Career Edge - AI Foundation
+            </h3>
+            <div class="meta-label" style="color: var(--cyan-accent); margin-bottom: 8px;">TCS iON (Tata Consultancy
+              Services)</div>
+            <p class="project-desc" style="font-size: 0.84rem;">Foundations of AI, Generative AI essentials, prompt
+              engineering, and ethical AI tools.</p>
+            <div style="margin-top: auto; padding-top: 10px;">
+              <a href="certificates.html" class="cert-link">Explore in Catalog &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Work Process Section -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="glass-card process-wrapper">
+          <div class="card-header">
+            <span class="header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </span>
+            <h2 class="card-title">My Development Process</h2>
+          </div>
+
+          <div class="process-timeline">
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="step-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <div class="step-num">01</div>
+              <h3 class="step-title">Discover</h3>
+              <p class="step-desc">Problem framing, domain research, and technical feasibility analysis.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="step-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <div class="step-num">02</div>
+              <h3 class="step-title">Architect</h3>
+              <p class="step-desc">Designing data pipelines, AI models, and software architecture.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+              <div class="step-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+              <div class="step-num">03</div>
+              <h3 class="step-title">Prototype</h3>
+              <p class="step-desc">Fast iteration, prompt engineering, and UI wireframing.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+              <div class="step-icon-wrapper">
+                <span class="code-symbol">&lt;/&gt;</span>
+              </div>
+              <div class="step-num">04</div>
+              <h3 class="step-title">Engineer</h3>
+              <p class="step-desc">Writing clean, scalable, and memory-efficient code.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step">
+              <div class="step-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="step-num">05</div>
+              <h3 class="step-title">Benchmark</h3>
+              <p class="step-desc">Testing for accuracy, performance, edge cases, and security.</p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="process-step">
+              <div class="step-icon-wrapper">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                  </path>
+                  <path
+                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                  </path>
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                </svg>
+              </div>
+              <div class="step-num">06</div>
+              <h3 class="step-title">Deploy</h3>
+              <p class="step-desc">Production delivery, documentation, and user enablement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials & By The Numbers Section -->
+    <section class="section" id="testimonials">
+      <div class="container grid-2col">
+        <!-- Testimonial Card -->
+        <div class="glass-card testimonial-card">
+          <div class="card-header">
+            <span class="header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                </path>
+                <path
+                  d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+                </path>
+              </svg>
+            </span>
+            <h2 class="card-title">Recommendations & Feedback</h2>
+          </div>
+
+          <div class="testimonial-content">
+            <div class="testimonial-avatar-wrap">
+              <img src="assets/hamza.jpg" alt="Professional Endorsement" class="client-avatar" />
+            </div>
+            <div class="testimonial-body">
+              <p class="quote-text">
+                "Rahul is a dedicated computer science student with a sharp grasp of modern AI frameworks and systems
+                programming. Delivers clean code, meets challenging milestones, and communicates seamlessly."
+              </p>
+              <div class="client-info">
+                <span class="client-name">&mdash; Tech Lead Endorsement</span>
+                <span class="client-role">Verified Mentor & Supervisor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- By The Numbers Card -->
+        <div class="glass-card stats-card">
+          <div class="card-header">
+            <span class="header-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </span>
+            <h2 class="card-title">By The Numbers</h2>
+          </div>
+
+          <div class="numbers-grid">
+            <div class="number-box">
+              <div class="big-stat">8+</div>
+              <div class="stat-lbl">Internships & Roles</div>
+            </div>
+
+            <div class="number-box">
+              <div class="big-stat">1.5M+</div>
+              <div class="stat-lbl">Digital Views</div>
+            </div>
+
+            <div class="number-box">
+              <div class="big-stat">13K+</div>
+              <div class="stat-lbl">Subscribers</div>
+            </div>
+
+            <div class="number-box">
+              <div class="big-stat">39+</div>
+              <div class="stat-lbl">Verified Credentials</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="glass-card contact-wrapper">
+          <div class="contact-grid">
+            <!-- Left Contact Info -->
+            <div class="contact-info-col">
+              <div class="card-header">
+                <span class="header-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </span>
+                <h2 class="card-title">Let's Connect & Collaborate</h2>
+              </div>
+
+              <p class="contact-subtext">
+                Interested in working together or exploring AI and software development opportunities? Reach out
+                directly.
+              </p>
+
+              <div class="contact-btn-row">
+                <a href="mailto:rahulgupta18062004@gmail.com" class="btn btn-primary">
+                  Send Email Directly
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="contact-meta-list">
+                <div class="contact-meta-row">
+                  <span class="meta-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="meta-label">Email</span>
+                    <a href="mailto:rahulgupta18062004@gmail.com"
+                      class="meta-val link-hover">rahulgupta18062004@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-meta-row">
+                  <span class="meta-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="meta-label">Phone</span>
+                    <a href="tel:+919953898610" class="meta-val link-hover">+91 9953898610</a>
+                  </div>
+                </div>
+
+                <div class="contact-meta-row">
+                  <span class="meta-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="meta-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/rg-rr2004" target="_blank" rel="noopener"
+                      class="meta-val link-hover">linkedin.com/in/rg-rr2004</a>
+                  </div>
+                </div>
+
+                <div class="contact-meta-row">
+                  <span class="meta-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </span>
+                  <div>
+                    <span class="meta-label">Location</span>
+                    <span class="meta-val">Rohini, Delhi &ndash; 110085, India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Contact Form -->
+            <form class="contact-form" id="contact-form"
+              onsubmit="event.preventDefault(); alert('Thank you, Rahul has received your message!');">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <input type="text" class="form-input" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-input" placeholder="Your Email" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Subject" required />
+              </div>
+
+              <div class="form-group">
+                <textarea class="form-textarea" rows="4" placeholder="Your Message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo">
+          <img src="assets/logo.jpg" alt="Rahul Gupta" class="logo-avatar" />
+          <span class="logo-text">Rahul Gupta</span>
+        </div>
+
+        <div class="footer-copy">
+          &copy; 2024 Rahul Gupta. All rights reserved.
+        </div>
+
+        <div class="footer-right">
+          <nav class="footer-links">
+            <a href="#home">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="certificates.html">Certificates</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <a href="#home" class="btn-back-to-top" aria-label="Back to Top">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Carousel Project Action Buttons Clickability and Stacking Protection */
+    .project-action-buttons {
+      position: relative !important;
+      z-index: 30 !important;
+    }
+    .project-action-buttons a,
+    .project-action-buttons button {
+      position: relative !important;
+      z-index: 35 !important;
+      pointer-events: auto !important;
+      cursor: pointer !important;
+    }
+    .btn-project-github svg,
+    .btn-project-demo svg,
+    .btn-project-demo .demo-play-icon {
+      pointer-events: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Fixed Scroll Animation Canvas Background -->
+  <div class="canvas-container">
+    <canvas id="animation-canvas" data-folder="kung fu"></canvas>
+  </div>
+
+  <div id="content-wrapper">
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html#home" class="logo">
+          <img src="assets/logo.jpg" alt="Rahul Gupta" class="logo-avatar" />
+          <span class="logo-text">Rahul Gupta</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html#home" class="nav-link">Home</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="education.html" class="nav-link">Education</a>
+          <a href="experience.html" class="nav-link">Experience</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+          <a href="certificates.html" class="nav-link">Certificates</a>
+          <a href="index.html#skills" class="nav-link">Skills</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="assets/Rahul_Gupta_Resume.pdf" download="Rahul_Gupta_Resume.pdf" class="btn-cv">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          Engineering & Innovation Portfolio
+        </div>
+        <h1 class="page-title">Featured <span class="highlight-cyan">Projects</span></h1>
+        <p class="page-subtitle">
+          20 verified production solutions across Generative AI, C++ systems, Machine Learning pipelines, NLP
+          recommenders, and web applications.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+
+        <!-- Controls: Search and Filter Tabs -->
+        <div class="project-controls-bar">
+          <div class="project-search-wrapper">
+            <svg class="project-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="project-search-input" class="project-search-input"
+              placeholder="Search projects by title, tech stack, organization..." autocomplete="off" />
+          </div>
+
+          <div class="project-filters">
+            <button type="button" class="project-filter-btn active" data-filter="all">All Projects (21)</button>
+            <button type="button" class="project-filter-btn" data-filter="genai">Generative AI & LLMs (4)</button>
+            <button type="button" class="project-filter-btn" data-filter="ml-nlp">Machine Learning & NLP (11)</button>
+            <button type="button" class="project-filter-btn" data-filter="cpp">C++ Systems & DSA (4)</button>
+            <button type="button" class="project-filter-btn" data-filter="web">Web & Digital Media (2)</button>
+          </div>
+        </div>
+
+        <div class="project-count-indicator">
+          Showing <strong id="visible-projects-count">21</strong> Projects
+        </div>
+
+        <!-- Projects Detailed Grid -->
+        <div class="projects-carousels-wrapper" id="projects-container">
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: DecodeLabs • Generative AI Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-decodelabs" data-category="genai"
+            data-company="decodelabs" data-company-name="DecodeLabs">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    DecodeLabs
+                  </span>
+                  <span class="carousel-series-pill">Generative AI Internship</span>
+                  <span class="project-date-badge">Aug 2026 – Sep 2026</span>
+                </div>
+                <h2 class="carousel-main-title">DecodeLabs &mdash; <span class="highlight-cyan">Generative AI
+                    Suite</span></h2>
+                <p class="carousel-main-subtitle">Production conversational systems, automated copywriting transformers,
+                  AST code reviewers, and multimodal generative studios powered by Google Gemini SDK.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span id="decodelabs-current-index">1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>4</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow" id="decodelabs-btn-prev"
+                    aria-label="Previous Project" title="Previous Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow" id="decodelabs-btn-next" aria-label="Next Project"
+                    title="Next Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-tabs-bar" id="decodelabs-tabs">
+              <button type="button" class="carousel-tab-btn active" data-slide="0">
+                <span class="tab-num">1</span> AI Chatbot
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">
+                <span class="tab-num">2</span> Copywriting Transformer
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="2">
+                <span class="tab-num">3</span> Code Reviewer
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="3">
+                <span class="tab-num">4</span> Multimodal Studio
+              </button>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <button type="button" class="carousel-edge-arrow edge-prev" id="decodelabs-edge-prev"
+                aria-label="Previous Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-track" id="decodelabs-track">
+                <div class="glass-card project-card-detailed" data-category="genai"
+                  data-title="AI Chatbot with Memory 🤖" data-org="DecodeLabs • Generative AI Internship"
+                  data-search="ai chatbot with memory 🤖 decodelabs • generative ai internship demo video video walkthrough live demo recording python conversational ai agent maintaining in-memory contextual history, dynamically managing multi-turn dialogue state throughout the entire user session. python google gemini api google genai sdk prompt engineering state management google search">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        DecodeLabs • Generative AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Chatbot with Memory 🤖</h2>
+                    <p class="project-card-desc">Python conversational AI agent maintaining in-memory contextual
+                      history,
+                      dynamically managing multi-turn dialogue state throughout the entire user session.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Integrates official Google GenAI SDK (google-genai) with configurable MAX_HISTORY to
+                          prevent
+                          context overflows.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Real-time date/time responses and live web grounding queries powered by Gemini Google
+                          Search
+                          tool integration.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Secure credential isolation using python-dotenv and environment variable
+                          management.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Interactive terminal interface with input validation, graceful fallback error handling,
+                          and
+                          session exit commands.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Google Gemini API</span><span
+                        class="tech-tag">Google GenAI SDK</span><span class="tech-tag">Prompt Engineering</span><span
+                        class="tech-tag">State Management</span><span class="tech-tag">Google Search</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/DecodeLabs-Project-1-Custom-AI-Chatbot-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/decodelabs_ai_chatbot_demo.mp4" target="_blank" rel="noopener noreferrer"
+                        class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="genai"
+                  data-title="Automated Copywriting & Tone Transformer ✍️ 🤖"
+                  data-org="DecodeLabs • Generative AI Internship"
+                  data-search="automated copywriting & tone transformer ✍️ 🤖 decodelabs • generative ai internship demo video video walkthrough live demo recording generative ai tool converting raw product descriptions into engaging, high-conversion copy customized for linkedin, instagram, and email campaigns. python google gemini api google genai sdk prompt engineering dynamic templates inference tuning">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        DecodeLabs • Generative AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Automated Copywriting & Tone Transformer ✍️ 🤖</h2>
+                    <p class="project-card-desc">Generative AI tool converting raw product descriptions into engaging,
+                      high-conversion copy customized for LinkedIn, Instagram, and Email campaigns.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Dynamic prompt templates injecting product title, description, target channel, and
+                          requested
+                          tone on the fly.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Interactive temperature and Top-P controls for dialing in creativity, determinism, and
+                          vocabulary diversity.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Automated formatting adjustments for platform constraints (hashtags, emojis,
+                          call-to-actions,
+                          formal tone).</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Secure credential loading with python-dotenv and clean separation of UI, prompt templates,
+                          and
+                          API clients.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Google Gemini API</span><span
+                        class="tech-tag">Google GenAI SDK</span><span class="tech-tag">Prompt Engineering</span><span
+                        class="tech-tag">Dynamic Templates</span><span class="tech-tag">Inference Tuning</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/DecodeLabs-Project-2-Copywriter-rahulgupta" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/decodelabs_automated_copywriting_demo.mp4" target="_blank" rel="noopener noreferrer"
+                        class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="genai"
+                  data-title="Intelligent Code Reviewer & Explainer 🧑‍💻 🤖"
+                  data-org="DecodeLabs • Generative AI Internship"
+                  data-search="intelligent code reviewer & explainer 🧑‍💻 🤖 decodelabs • generative ai internship demo video video walkthrough live demo recording ai-powered developer tool providing static code inspection, syntax anomaly detection, security audit warnings, and refactoring recommendations for python, javascript, and java. python streamlit google gemini api code review json schema prompt engineering">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        DecodeLabs • Generative AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Intelligent Code Reviewer & Explainer 🧑‍💻 🤖</h2>
+                    <p class="project-card-desc">AI-powered developer tool providing static code inspection, syntax
+                      anomaly
+                      detection, security audit warnings, and refactoring recommendations for Python, JavaScript, and
+                      Java.
+                    </p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Source code context injection into Google Gemini with structured JSON output
+                          enforcement.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Categorized bug reports with severity rating, line numbers, issue description, and
+                          concrete code
+                          fixes.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Plain-language logic explanation designed to help developers understand intricate code
+                          snippets.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Side-by-side original vs optimized code views with syntax highlighting rendered in
+                          Streamlit.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Streamlit</span><span
+                        class="tech-tag">Google
+                        Gemini API</span><span class="tech-tag">Code Review</span><span class="tech-tag">JSON
+                        Schema</span><span class="tech-tag">Prompt Engineering</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/DecodeLabs-Project-4-Intelligent-Code-Reviewer-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/decodelabs_code_reviewer_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="genai"
+                  data-title="Multimodal Image Generation Studio 🎨" data-org="DecodeLabs • Generative AI Internship"
+                  data-search="multimodal image generation studio 🎨 decodelabs • generative ai internship demo video video walkthrough live demo recording web-based ai creative studio translating natural language prompts into high-resolution imagery using stability ai's visual synthesis models. python streamlit stability ai api rest api integration generative ai image processing">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        DecodeLabs • Generative AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Multimodal Image Generation Studio 🎨</h2>
+                    <p class="project-card-desc">Web-based AI creative studio translating natural language prompts into
+                      high-resolution imagery using Stability AI's visual synthesis models.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Aspect ratio customization across 8 dimensions (1:1, 16:9, 21:9, 3:2, 2:3, 4:5, 5:4,
+                          9:16).</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Multiple stylistic modes: Photographic, Cinematic, Anime, Digital Art, Comic Book,
+                          Fantasy, and
+                          3D Model.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Seamless Streamlit image preview gallery with direct high-resolution PNG downloads.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Robust exception handling for network timeouts, quota limits, and secure .env credential
+                          management.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Streamlit</span><span
+                        class="tech-tag">Stability AI API</span><span class="tech-tag">REST API Integration</span><span
+                        class="tech-tag">Generative AI</span><span class="tech-tag">Image Processing</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/DecodeLabs-Project-3-Multimodal-Image-Generation-Studio-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/decodelabs_multimodal_studio_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="carousel-edge-arrow edge-next" id="decodelabs-edge-next"
+                aria-label="Next Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="carousel-footer-bar">
+              <div class="perspective-controls-bar">
+                <button type="button" class="perspective-nav-btn" id="decodelabs-pill-prev" aria-label="Show previous slide" title="Previous Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-pagination-dots perspective-dots" id="decodelabs-dots">
+                  <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                  <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                  <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                </div>
+                <button type="button" class="perspective-nav-btn" id="decodelabs-pill-next" aria-label="Show next slide" title="Next Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Use navigation arrows, tabs, or swipe to browse all 4 projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: Data Alcott Systems • AI & Data Science Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-dataalcott" data-category="ml-nlp"
+            data-company="dataalcott" data-company-name="Data Alcott Systems">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Data Alcott Systems
+                  </span>
+                  <span class="carousel-series-pill">AI & Data Science Internship</span>
+                  <span class="project-date-badge">Aug 2026 – Sep 2026</span>
+                </div>
+                <h2 class="carousel-main-title">Data Alcott Systems &mdash; <span class="highlight-cyan">AI & Data
+                    Science Suite</span></h2>
+                <p class="carousel-main-subtitle">Machine learning recommendation engines, NLP resume analyzers, TF-IDF
+                  project topic matchers, and automated registration assistants.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span id="dataalcott-current-index">1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>4</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow" id="dataalcott-btn-prev"
+                    aria-label="Previous Project" title="Previous Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow" id="dataalcott-btn-next" aria-label="Next Project"
+                    title="Next Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-tabs-bar" id="dataalcott-tabs">
+              <button type="button" class="carousel-tab-btn active" data-slide="0">
+                <span class="tab-num">1</span> AI Resume Reviewer 🎬
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">
+                <span class="tab-num">2</span> Topic Recommender 🎬
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="2">
+                <span class="tab-num">3</span> Registration Assistant
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="3">
+                <span class="tab-num">4</span> Recommendation Engine 🎬
+              </button>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <button type="button" class="carousel-edge-arrow edge-prev" id="dataalcott-edge-prev"
+                aria-label="Previous Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-track" id="dataalcott-track">
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Resume Reviewer & Rewriter 🤖 📄"
+                  data-org="Data Alcott Systems • AI & Data Science Internship"
+                  data-search="ai resume reviewer & rewriter 🤖 📄 data alcott systems • ai & data science internship demo video video walkthrough live demo recording ai & nlp-based web utility analyzing pdf resumes to provide structured diagnostic feedback, section scoring, and automated ats compatibility enhancement. python nlp nltk pypdf2 scikit-learn streamlit ats scoring">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Data Alcott Systems • AI & Data Science Internship
+                      </span>
+                      <span class="project-date-badge">Sep 2026 – Sep 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Resume Reviewer & Rewriter 🤖 📄</h2>
+                    <p class="project-card-desc">AI & NLP-based web utility analyzing PDF resumes to provide structured
+                      diagnostic feedback, section scoring, and automated ATS compatibility enhancement.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Text preprocessing pipeline featuring tokenization, stop-word elimination, lemmatization,
+                          and
+                          section parsing.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Multi-criteria scoring model assessing skills, education, experience, completeness, and
+                          keyword
+                          frequency.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Automated ATS compatibility checks identifying missing contact details, crucial headers,
+                          or
+                          keyword deficiencies.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Generates personalized improvement suggestions, detailed scoring summaries, and
+                          downloadable
+                          text reports.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span
+                        class="tech-tag">NLTK</span><span class="tech-tag">PyPDF2</span><span
+                        class="tech-tag">Scikit-Learn</span><span class="tech-tag">Streamlit</span><span
+                        class="tech-tag">ATS
+                        Scoring</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-4-AI-Resume-Reviewer-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/data_alcott_resume_reviewer_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Project Topic Recommender - Data Alcott Systems 🤖 🎯"
+                  data-org="Data Alcott Systems • AI & Data Science Internship"
+                  data-search="ai project topic recommender - data alcott systems 🤖 🎯 data alcott systems • ai & data science internship demo video video walkthrough live demo recording personalized academic topic recommendation system matching students with engineering and research project ideas based on technical skills, interests, and domain goals. python nlp tf-idf vectorizer cosine similarity scikit-learn streamlit pandas">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Data Alcott Systems • AI & Data Science Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Project Topic Recommender - Data Alcott Systems 🤖 🎯</h2>
+                    <p class="project-card-desc">Personalized academic topic recommendation system matching students
+                      with
+                      engineering and research project ideas based on technical skills, interests, and domain goals.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Text preprocessing pipeline with lowercasing, character sanitization, and text
+                          normalization.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Numerical text encoding via TF-IDF Vectorization paired with Cosine Similarity
+                          scoring.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Multi-attribute filtering across difficulty level, domain specialization, and estimated
+                          project
+                          duration.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Interactive Streamlit web interface with profile input forms and real-time Top-N project
+                          matching.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">TF-IDF
+                        Vectorizer</span><span class="tech-tag">Cosine Similarity</span><span
+                        class="tech-tag">Scikit-Learn</span><span class="tech-tag">Streamlit</span><span
+                        class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-3-AI-Project-Topic-Recommender-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/data_alcott_topic_recommender_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Registration Assistant 🤖 💬"
+                  data-org="Data Alcott Systems • AI & Data Science Internship"
+                  data-search="ai registration assistant 🤖 💬 data alcott systems • ai & data science internship demo video video walkthrough live demo recording conversational course registration and academic advising assistant guiding students through course eligibility checks and application intake. python flask nltk conversational ai html5/css3/js json storage">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Data Alcott Systems • AI & Data Science Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Registration Assistant 🤖 💬</h2>
+                    <p class="project-card-desc">Conversational course registration and academic advising assistant
+                      guiding
+                      students through course eligibility checks and application intake.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>NLTK NLP engine powering intent classification (greetings, registration, help, FAQs) and
+                          entity
+                          extraction.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Structured finite-state dialog manager: name -> email -> field -> experience -> review ->
+                          confirmation.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Client-side validation and backend verification with lightweight JSON record persistence
+                          without
+                          heavy DB overhead.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Responsive web front-end communicating with a Python Flask REST backend for real-time
+                          conversational UX.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span
+                        class="tech-tag">NLTK</span><span class="tech-tag">Conversational AI</span><span
+                        class="tech-tag">HTML5/CSS3/JS</span><span class="tech-tag">JSON Storage</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-1-AI-Registration-Assistant-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/data_alcott_registration_assistant_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="Recommendation Engine 🤖 🎯" data-org="Data Alcott Systems • AI & Data Science Internship"
+                  data-search="recommendation engine 🤖 🎯 data alcott systems • ai & data science internship demo video video walkthrough live demo recording multi-strategy recommendation engine suggesting personalized internship openings to university students based on skills, domain, and historical preference ratings. python collaborative filtering content-based filtering hybrid recommendation scikit-learn streamlit">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Data Alcott Systems • AI & Data Science Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Recommendation Engine 🤖 🎯</h2>
+                    <p class="project-card-desc">Multi-strategy recommendation engine suggesting personalized internship
+                      openings to university students based on skills, domain, and historical preference ratings.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Collaborative Filtering model identifying peer similarity clusters using Cosine Similarity
+                          matrices.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Content-Based Filtering computing TF-IDF feature alignments between student profiles and
+                          job
+                          postings.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Hybrid recommendation algorithm combining both methodologies through adjustable weighted
+                          scoring.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Rigorous offline evaluation utilizing ranking metrics including Precision@K, Recall@K,
+                          MAP, and
+                          RMSE.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Collaborative Filtering</span><span
+                        class="tech-tag">Content-Based Filtering</span><span class="tech-tag">Hybrid
+                        Recommendation</span><span class="tech-tag">Scikit-Learn</span><span
+                        class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Data-Alcott-Systems-Project-2-Recommendation-Engine-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/data_alcott_recommendation_engine_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="carousel-edge-arrow edge-next" id="dataalcott-edge-next"
+                aria-label="Next Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="carousel-footer-bar">
+              <div class="perspective-controls-bar">
+                <button type="button" class="perspective-nav-btn" id="dataalcott-pill-prev" aria-label="Show previous slide" title="Previous Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-pagination-dots perspective-dots" id="dataalcott-dots">
+                  <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                  <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                  <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                </div>
+                <button type="button" class="perspective-nav-btn" id="dataalcott-pill-next" aria-label="Show next slide" title="Next Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Use navigation arrows, tabs, or swipe to browse all 4 projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: Yuva Intern by Henry Harvin • AI Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-yuvaintern" data-category="ml-nlp"
+            data-company="yuvaintern" data-company-name="Yuva Intern by Henry Harvin">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Yuva Intern by Henry Harvin
+                  </span>
+                  <span class="carousel-series-pill">AI Internship</span>
+                  <span class="project-date-badge">Aug 2026 – Sep 2026</span>
+                </div>
+                <h2 class="carousel-main-title">Yuva Intern &mdash; <span class="highlight-cyan">Applied AI & Systems
+                    Engineering</span></h2>
+                <p class="carousel-main-subtitle">Machine learning model performance benchmarking, end-to-end AI
+                  innovation roadmap, TF-IDF cosine recommender pipelines, and intake classification prototypes.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span id="yuvaintern-current-index">1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>4</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow" id="yuvaintern-btn-prev"
+                    aria-label="Previous Project" title="Previous Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow" id="yuvaintern-btn-next" aria-label="Next Project"
+                    title="Next Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-tabs-bar" id="yuvaintern-tabs">
+              <button type="button" class="carousel-tab-btn active" data-slide="0">
+                <span class="tab-num">1</span> Model Optimization
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">
+                <span class="tab-num">2</span> Strategy & Roadmap
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="2">
+                <span class="tab-num">3</span> Topic Recommender
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="3">
+                <span class="tab-num">4</span> Registration Prototype
+              </button>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <button type="button" class="carousel-edge-arrow edge-prev" id="yuvaintern-edge-prev"
+                aria-label="Previous Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-track" id="yuvaintern-track">
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Performance Evaluation & Optimization Strategy 🤖 📊"
+                  data-org="Yuva Intern by Henry Harvin • AI Internship"
+                  data-search="ai performance evaluation & optimization strategy 🤖 📊 yuva intern by henry harvin • ai internship demo video video walkthrough live demo recording final project at yuva intern evaluating machine learning model performance and establishing a structured engineering strategy to improve accuracy, reliability, and computational efficiency. python scikit-learn random forest gridsearchcv hyperparameter tuning pandas model evaluation">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Yuva Intern by Henry Harvin • AI Internship
+                      </span>
+                      <span class="project-date-badge">Sep 2026 – Sep 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Performance Evaluation & Optimization Strategy 🤖 📊</h2>
+                    <p class="project-card-desc">Final project at Yuva Intern evaluating Machine Learning model
+                      performance
+                      and establishing a structured engineering strategy to improve accuracy, reliability, and
+                      computational
+                      efficiency.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Simulated student dataset evaluated with Random Forest Regression using MAE, RMSE, and R²
+                          metrics.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Hyperparameter optimization using GridSearchCV with 5-fold cross-validation on unseen test
+                          data.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Actual vs predicted analysis, feature importance extraction, and performance bottleneck
+                          isolation.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Troubleshooting guide, model drift mitigation, backup protocols, and continuous
+                          improvement
+                          framework.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Scikit-Learn</span><span
+                        class="tech-tag">Random Forest</span><span class="tech-tag">GridSearchCV</span><span
+                        class="tech-tag">Hyperparameter Tuning</span><span class="tech-tag">Pandas</span><span
+                        class="tech-tag">Model Evaluation</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Yuva-Intern-Project-4-AI-Performance-Evaluation-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/yuva_intern_model_evaluation_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Innovation Strategy and Roadmap 🤖 🗺️"
+                  data-org="Yuva Intern by Henry Harvin • AI Internship"
+                  data-search="ai innovation strategy and roadmap 🤖 🗺️ yuva intern by henry harvin • ai internship comprehensive strategic blueprint and 12-month phased implementation roadmap for an ai-powered student registration and academic advising assistant. generative ai rag architecture llms nlp ai governance strategic roadmap">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Yuva Intern by Henry Harvin • AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Innovation Strategy and Roadmap 🤖 🗺️</h2>
+                    <p class="project-card-desc">Comprehensive strategic blueprint and 12-month phased implementation
+                      roadmap
+                      for an AI-Powered Student Registration and Academic Advising Assistant.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Multi-tier architecture integrating NLP, Machine Learning, LLMs, and Retrieval-Augmented
+                          Generation (RAG).</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Phased 12-month timeline: research, prototype engineering, pilot testing, advanced AI, and
+                          production rollout.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Responsible AI governance protocols addressing hallucination risks, cybersecurity threats,
+                          and
+                          data privacy.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Actionable KPIs established for precision, response latency, student satisfaction, and
+                          automation rate.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Generative AI</span><span class="tech-tag">RAG Architecture</span><span
+                        class="tech-tag">LLMs</span><span class="tech-tag">NLP</span><span class="tech-tag">AI
+                        Governance</span><span class="tech-tag">Strategic Roadmap</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Yuva-Intern-Project-1-Prototype-Design-and-AI-Model-Experimentation-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <span class="demo-video-pill" title="Demo video will be uploaded soon">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        Demo Video Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Project Topic Recommender - Yuva Intern 🤖 🎯"
+                  data-org="Yuva Intern by Henry Harvin • AI Internship"
+                  data-search="ai project topic recommender - yuva intern 🤖 🎯 yuva intern by henry harvin • ai internship demo video video walkthrough live demo recording content-based recommendation pipeline analyzing project domain attributes, skill requirements, and student preferences to compute tailored recommendations. python nlp tf-idf cosine similarity precision@k joblib streamlit">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Yuva Intern by Henry Harvin • AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Project Topic Recommender - Yuva Intern 🤖 🎯</h2>
+                    <p class="project-card-desc">Content-based recommendation pipeline analyzing project domain
+                      attributes,
+                      skill requirements, and student preferences to compute tailored recommendations.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Feature engineering combining title, domain, description, skills, and difficulty into
+                          composite
+                          feature vectors.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Cosine Similarity matching engine generating ranked Top-N recommendations with match
+                          percentages.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Model serialization and persistence pipeline implemented using Joblib for low-latency
+                          inference.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Quantitative recommendation validation using Precision@K metrics and modular Python
+                          architecture.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span
+                        class="tech-tag">TF-IDF</span><span class="tech-tag">Cosine Similarity</span><span
+                        class="tech-tag">Precision@K</span><span class="tech-tag">Joblib</span><span
+                        class="tech-tag">Streamlit</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Yuva-Intern-Project-3-AI-Project-Topic-Recommender-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/yuva_intern_topic_recommender_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Registration Assistant (Prototype & Classifier) 🤖 📑"
+                  data-org="Yuva Intern by Henry Harvin • AI Internship"
+                  data-search="ai registration assistant (prototype & classifier) 🤖 📑 yuva intern by henry harvin • ai internship demo video video walkthrough live demo recording machine learning prototype predicting registration intake outcomes (approved, pending review, rejected) to assist admissions officers. python streamlit random forest decision trees classification probability scoring">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Yuva Intern by Henry Harvin • AI Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Registration Assistant (Prototype & Classifier) 🤖 📑</h2>
+                    <p class="project-card-desc">Machine learning prototype predicting registration intake outcomes
+                      (Approved,
+                      Pending Review, Rejected) to assist admissions officers.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Multi-model evaluation comparing Decision Tree and Random Forest classifiers on student
+                          application metrics.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Outputs predicted class outcomes along with probability-based confidence visualization
+                          bars.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Interactive Streamlit dashboard accepting age, academic scores, document status, and
+                          course
+                          availability.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Feature importance analysis highlighting key academic drivers impacting registration
+                          outcomes.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Streamlit</span><span
+                        class="tech-tag">Random
+                        Forest</span><span class="tech-tag">Decision Trees</span><span
+                        class="tech-tag">Classification</span><span class="tech-tag">Probability Scoring</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Yuva-Intern-Project-1-Prototype-Design-and-AI-Model-Experimentation-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/yuva_intern_registration_assistant_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="carousel-edge-arrow edge-next" id="yuvaintern-edge-next"
+                aria-label="Next Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="carousel-footer-bar">
+              <div class="perspective-controls-bar">
+                <button type="button" class="perspective-nav-btn" id="yuvaintern-pill-prev" aria-label="Show previous slide" title="Previous Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-pagination-dots perspective-dots" id="yuvaintern-dots">
+                  <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                  <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                  <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                </div>
+                <button type="button" class="perspective-nav-btn" id="yuvaintern-pill-next" aria-label="Show next slide" title="Next Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Use navigation arrows, tabs, or swipe to browse all 4 projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: Thiranex EduTech LLP • C++ Programming Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-thiranex" data-category="cpp"
+            data-company="thiranex" data-company-name="Thiranex EduTech LLP">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Thiranex EduTech LLP
+                  </span>
+                  <span class="carousel-series-pill">C++ Programming Internship</span>
+                  <span class="project-date-badge">Aug 2026 – Sep 2026</span>
+                </div>
+                <h2 class="carousel-main-title">Thiranex EduTech &mdash; <span class="highlight-cyan">C++ Systems & DSA
+                    Portfolio</span></h2>
+                <p class="carousel-main-subtitle">Robust object-oriented desktop architectures, transactional record
+                  engines, encrypted credential persistence, and algorithmic game state managers.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span id="thiranex-current-index">1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>4</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow" id="thiranex-btn-prev" aria-label="Previous Project"
+                    title="Previous Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow" id="thiranex-btn-next" aria-label="Next Project"
+                    title="Next Project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-tabs-bar" id="thiranex-tabs">
+              <button type="button" class="carousel-tab-btn active" data-slide="0">
+                <span class="tab-num">1</span> Bank Management
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="1">
+                <span class="tab-num">2</span> Library System
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="2">
+                <span class="tab-num">3</span> Student Management
+              </button>
+              <button type="button" class="carousel-tab-btn" data-slide="3">
+                <span class="tab-num">4</span> Tic Tac Toe Game
+              </button>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <button type="button" class="carousel-edge-arrow edge-prev" id="thiranex-edge-prev"
+                aria-label="Previous Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-track" id="thiranex-track">
+                <div class="glass-card project-card-detailed" data-category="cpp"
+                  data-title="Bank Management Application 🏦 💻"
+                  data-org="Thiranex EduTech LLP • C++ Programming Internship"
+                  data-search="bank management application 🏦 💻 thiranex edutech llp • c++ programming internship demo video video walkthrough live demo recording comprehensive c++ banking simulation providing persistent account management, fund transfers, deposits, and withdrawal logging using object-oriented principles. c++ oop file handling data persistence encapsulation transaction logic">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Thiranex EduTech LLP • C++ Programming Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Bank Management Application 🏦 💻</h2>
+                    <p class="project-card-desc">Comprehensive C++ banking simulation providing persistent account
+                      management,
+                      fund transfers, deposits, and withdrawal logging using object-oriented principles.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Customer account lifecycle: account creation, balance inquiries, deposit processing, and
+                          debit
+                          validation.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Persistent binary/text file handling ensuring customer balance and transaction records
+                          persist
+                          across sessions.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Robust OOP encapsulation preventing direct unauthorized state tampering.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Interactive console menu with input validation and zero division or overdraft
+                          protection.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">C++</span><span class="tech-tag">OOP</span><span class="tech-tag">File
+                        Handling</span><span class="tech-tag">Data Persistence</span><span
+                        class="tech-tag">Encapsulation</span><span class="tech-tag">Transaction Logic</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Thiranex-Project-2-Bank-Management-Application-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/thiranex_bank_management_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="cpp"
+                  data-title="Library Management System 📚 💻"
+                  data-org="Thiranex EduTech LLP • C++ Programming Internship"
+                  data-search="library management system 📚 💻 thiranex edutech llp • c++ programming internship demo video video walkthrough live demo recording object-oriented c++ management suite designed to automate book cataloging, member registration, book checkouts, returns, and inventory record keeping. c++ oop vectors & pointers search algorithms data structures console ui">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Thiranex EduTech LLP • C++ Programming Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Library Management System 📚 💻</h2>
+                    <p class="project-card-desc">Object-Oriented C++ management suite designed to automate book
+                      cataloging,
+                      member registration, book checkouts, returns, and inventory record keeping.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Modular architecture with Book, Member, BorrowRecord, and Library class
+                          abstractions.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Dynamic vector storage with pointers, constructors, destructors, and memory
+                          management.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Linear and binary search algorithms for rapid lookup by Book ID, title, or author
+                          name.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Real-time availability tracking and fine/return status tracking displayed in a clean
+                          console
+                          UI.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">C++</span><span class="tech-tag">OOP</span><span class="tech-tag">Vectors &
+                        Pointers</span><span class="tech-tag">Search Algorithms</span><span class="tech-tag">Data
+                        Structures</span><span class="tech-tag">Console UI</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Thiranex-Project-3-Library-Management-System-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/thiranex_library_management_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="cpp"
+                  data-title="Student Management System 🎓 💻"
+                  data-org="Thiranex EduTech LLP • C++ Programming Internship"
+                  data-search="student management system 🎓 💻 thiranex edutech llp • c++ programming internship demo video video walkthrough live demo recording console software engineered in c++ to manage, update, and persist student academic records through robust file input/output operations. c++ oop file i/o crud operations data persistence menu navigation">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Thiranex EduTech LLP • C++ Programming Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Student Management System 🎓 💻</h2>
+                    <p class="project-card-desc">Console software engineered in C++ to manage, update, and persist
+                      student
+                      academic records through robust file input/output operations.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Complete CRUD operations: Add student, view records, search by Roll Number, update info,
+                          delete
+                          records.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Persistent disk storage preserving data integrity across application closures and system
+                          reboots.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Input validation routines guarding against invalid data types and out-of-bounds roll
+                          numbers.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Structured modular design demonstrating encapsulation, functions, loops, and file
+                          streams.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">C++</span><span class="tech-tag">OOP</span><span class="tech-tag">File
+                        I/O</span><span class="tech-tag">CRUD Operations</span><span class="tech-tag">Data
+                        Persistence</span><span class="tech-tag">Menu Navigation</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Thiranex-Project-1-Student-Management-System-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/thiranex_student_management_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="glass-card project-card-detailed" data-category="cpp"
+                  data-title="Tic Tac Toe Mini Game 🎮 💻" data-org="Thiranex EduTech LLP • C++ Programming Internship"
+                  data-search="tic tac toe mini game 🎮 💻 thiranex edutech llp • c++ programming internship demo video video walkthrough live demo recording interactive two-player console application programmed in c++ demonstrating core algorithm structures, input handling, and dynamic board state evaluations. c++ 2d arrays game loop boolean logic input validation dsa">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Thiranex EduTech LLP • C++ Programming Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Tic Tac Toe Mini Game 🎮 💻</h2>
+                    <p class="project-card-desc">Interactive two-player console application programmed in C++
+                      demonstrating
+                      core algorithm structures, input handling, and dynamic board state evaluations.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>3x3 matrix game board state dynamically refreshed in terminal after every valid player
+                          move.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Win condition detection verifying horizontal rows, vertical columns, and both
+                          diagonals.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Draw state detection identifying full board conditions without a winning player.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Input boundary enforcement rejecting non-numeric entries or moves on already occupied
+                          cells,
+                          with rematch loops.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">C++</span><span class="tech-tag">2D Arrays</span><span
+                        class="tech-tag">Game
+                        Loop</span><span class="tech-tag">Boolean Logic</span><span class="tech-tag">Input
+                        Validation</span><span class="tech-tag">DSA</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Thiranex-Project-4-Mini-Game-Tic-Tac-Toe-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/thiranex_tic_tac_toe_demo.mp4" target="_blank" rel="noopener noreferrer"
+                        class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="carousel-edge-arrow edge-next" id="thiranex-edge-next"
+                aria-label="Next Project">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="carousel-footer-bar">
+              <div class="perspective-controls-bar">
+                <button type="button" class="perspective-nav-btn" id="thiranex-pill-prev" aria-label="Show previous slide" title="Previous Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <div class="carousel-pagination-dots perspective-dots" id="thiranex-dots">
+                  <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                  <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                  <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                  <button type="button" class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                </div>
+                <button type="button" class="perspective-nav-btn" id="thiranex-pill-next" aria-label="Show next slide" title="Next Slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel-hint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Use navigation arrows, tabs, or swipe to browse all 4 projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: CodSoft • Artificial Intelligence Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-codsoft" data-category="ml-nlp"
+            data-company="codsoft" data-company-name="CodSoft">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    CodSoft
+                  </span>
+                  <span class="carousel-series-pill">Artificial Intelligence Internship</span>
+                  <span class="project-date-badge">Sep 2026 – Present</span>
+                </div>
+                <h2 class="carousel-main-title">CodSoft &mdash; <span class="highlight-cyan">Multimodal Computer
+                    Vision</span></h2>
+                <p class="carousel-main-subtitle">Deep learning visual perception pipeline combining ResNet50 CNN visual
+                  feature extraction with LSTM recurrent language captioning.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span>1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>1</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Previous Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Next Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <div class="carousel-track single-project-track" id="codsoft-track">
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="AI Image Captioning 🤖 🖼️" data-org="CodSoft • Artificial Intelligence Internship"
+                  data-search="ai image captioning 🤖 🖼️ codsoft • artificial intelligence internship demo video video walkthrough live demo recording deep learning multimodal application developed as part of my artificial intelligence internship at codsoft. combines computer vision and natural language processing (nlp) to automatically generate meaningful textual descriptions for images. python resnet50 lstm computer vision nlp deep learning streamlit keras">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        CodSoft • Artificial Intelligence Internship
+                      </span>
+                      <span class="project-date-badge">Sep 2026 – Sep 2026</span>
+                    </div>
+                    <h2 class="project-card-title">AI Image Captioning 🤖 🖼️</h2>
+                    <p class="project-card-desc">Deep learning multimodal application developed as part of my Artificial
+                      Intelligence internship at CodSoft. Combines Computer Vision and Natural Language Processing (NLP)
+                      to
+                      automatically generate meaningful textual descriptions for images.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Pretrained ResNet50 CNN extracts 2048-dimensional visual feature representations.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>LSTM-based language model sequentially predicts caption tokens word-by-word with
+                          startseq/endseq
+                          boundary tokens.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Memory-efficient Keras batch data generator designed to process caption sequences and
+                          optimize
+                          RAM.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Interactive Streamlit web application providing seamless image upload and real-time
+                          caption
+                          inference.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">ResNet50</span><span
+                        class="tech-tag">LSTM</span><span class="tech-tag">Computer Vision</span><span
+                        class="tech-tag">NLP</span><span class="tech-tag">Deep Learning</span><span
+                        class="tech-tag">Streamlit</span><span class="tech-tag">Keras</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/CodSoft-Project-1-Ai-Image-Captioning-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/codsoft_ai_image_captioning_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: CodeAlpha • Artificial Intelligence Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-codealpha" data-category="ml-nlp"
+            data-company="codealpha" data-company-name="CodeAlpha">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    CodeAlpha
+                  </span>
+                  <span class="carousel-series-pill">Artificial Intelligence Internship</span>
+                  <span class="project-date-badge">Aug 2026 – Sep 2026</span>
+                </div>
+                <h2 class="carousel-main-title">CodeAlpha &mdash; <span class="highlight-cyan">Computer Vision & Object
+                    Tracking</span></h2>
+                <p class="carousel-main-subtitle">Real-time object detection and multi-target tracking combining YOLO11n
+                  visual inference with SORT Kalman filtering and Hungarian matching.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span>1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>1</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Previous Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Next Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <div class="carousel-track single-project-track" id="codealpha-track">
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="Object Detection & Tracking 🎯 📹"
+                  data-org="CodeAlpha • Artificial Intelligence Internship"
+                  data-search="object detection & tracking 🎯 📹 codealpha • artificial intelligence internship demo video video walkthrough live demo recording computer vision project combining yolo11n for real-time object detection with sort tracking algorithm python opencv kalman filtering iou sort yolo11n deep learning video processing">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        CodeAlpha • Artificial Intelligence Internship
+                      </span>
+                      <span class="project-date-badge">Aug 2026 – Aug 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Object Detection & Tracking 🎯 📹</h2>
+                    <p class="project-card-desc">Computer vision application combining YOLO11n for real-time object
+                      detection with the SORT (Simple Online and Realtime Tracking) algorithm to detect and track
+                      multiple objects across video frames.</p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>YOLO11n generates bounding boxes, class labels, and confidence scores across live webcam
+                          feeds and video files.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>SORT algorithm assigns persistent unique IDs across consecutive frames using Kalman
+                          Filters and Hungarian matching.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>IoU (Intersection over Union) association with configurable confidence thresholds and
+                          real-time FPS monitoring.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Object counting, unique ID tracking, screenshot capture, processed video recording, and
+                          automated model downloading.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span><span
+                        class="tech-tag">YOLO11n</span><span class="tech-tag">SORT</span><span class="tech-tag">Kalman
+                        Filter</span><span class="tech-tag">Computer Vision</span><span class="tech-tag">Deep
+                        Learning</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/Code-Alpha-Project-1-Object-Detection-and-Tracking-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/codealpha_object_detection_tracking_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: RabTech Academy • AI & ML Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-robtech" data-category="ml-nlp"
+            data-company="robtech" data-company-name="RobTech Academy">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    RobTech Academy
+                  </span>
+                  <span class="carousel-series-pill">AI & ML Internship</span>
+                  <span class="project-date-badge">Sep 2026 – Present</span>
+                </div>
+                <h2 class="carousel-main-title">RabTech Academy &mdash; <span class="highlight-cyan">Responsible Machine
+                    Learning</span></h2>
+                <p class="carousel-main-subtitle">Customer retention diagnostic card prioritizing algorithmic
+                  transparency, dataset provenance, and human-in-the-loop governance.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span>1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>1</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Previous Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Next Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <div class="carousel-track single-project-track" id="robtech-track">
+                <div class="glass-card project-card-detailed" data-category="ml-nlp"
+                  data-title="ML Problem Framing & Responsible Data Card 🤖 📊"
+                  data-org="RobTech Academy • AI & ML Internship"
+                  data-search="ml problem framing & responsible data card 🤖 📊 robtech academy • ai & ml internship demo video video walkthrough live demo recording customer churn prediction engineered using responsible machine learning principles to empower proactive retention decisions rather than automated, irreversible actions. python scikit-learn responsible ai logistic regression data ethics model evaluation">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        RabTech Academy • AI & ML Internship
+                      </span>
+                      <span class="project-date-badge">Sep 2026 – Sep 2026</span>
+                    </div>
+                    <h2 class="project-card-title">ML Problem Framing & Responsible Data Card 🤖 📊</h2>
+                    <p class="project-card-desc">Customer Churn Prediction engineered using responsible machine learning
+                      principles to empower proactive retention decisions rather than automated, irreversible actions.
+                    </p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>End-to-end ML problem framing: business decisions, prediction targets, observation units,
+                          and
+                          action windows.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Comprehensive Responsible Data Card documenting provenance, representation, data leakage,
+                          and
+                          ethical safeguards.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Rule-based baseline compared with Logistic Regression via Precision, Recall, F1-Score, and
+                          confusion matrix.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Human-in-the-loop review workflow, uncertainty abstention, and proactive risk register for
+                          algorithmic governance.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">Python</span><span class="tech-tag">Scikit-Learn</span><span
+                        class="tech-tag">Responsible AI</span><span class="tech-tag">Logistic Regression</span><span
+                        class="tech-tag">Data Ethics</span><span class="tech-tag">Model Evaluation</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/RabTech-Academy-Project-1-ML-Problem-Framing-Responsible-Data-Card-rahulgupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/robtech_ml_problem_framing_demo.mp4" target="_blank"
+                        rel="noopener noreferrer" class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: Oasis Infobyte • Web Development Internship
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-oasis" data-category="web" data-company="oasis"
+            data-company-name="Oasis Infobyte">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Oasis Infobyte
+                  </span>
+                  <span class="carousel-series-pill">Web Development Internship</span>
+                  <span class="project-date-badge">Sep 2026 – Present</span>
+                </div>
+                <h2 class="carousel-main-title">Oasis Infobyte &mdash; <span class="highlight-cyan">Web Applications &
+                    UI/UX</span></h2>
+                <p class="carousel-main-subtitle">Modern interactive browser utilities featuring dark glassmorphism
+                  styling, stateful local storage persistence, and event-driven Vanilla JavaScript.</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span>1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>1</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Previous Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Next Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <div class="carousel-track single-project-track" id="oasis-track">
+                <div class="glass-card project-card-detailed" data-category="web" data-title="Calculator 🧮 💻"
+                  data-org="Oasis Infobyte • Web Development Internship"
+                  data-search="calculator 🧮 💻 oasis infobyte • web development internship demo video video walkthrough live demo recording responsive browser-based web application providing a sleek, interactive, and user-friendly interface for performing arithmetic calculations directly in the browser. html5 css3 javascript css grid glassmorphism local storage ui/ux">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        Oasis Infobyte • Web Development Internship
+                      </span>
+                      <span class="project-date-badge">Sep 2026 – Sep 2026</span>
+                    </div>
+                    <h2 class="project-card-title">Calculator 🧮 💻</h2>
+                    <p class="project-card-desc">Responsive browser-based web application providing a sleek,
+                      interactive, and
+                      user-friendly interface for performing arithmetic calculations directly in the browser.</p>
+
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Modern dark glassmorphism aesthetic built with CSS Grid, responsive layouts, and
+                          interactive
+                          active button states.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Persistent calculation history panel powered by browser Local Storage allowing review,
+                          reuse,
+                          and history clearing.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Full keyboard navigation support, decimal/percentage operations, positive/negative toggle,
+                          and
+                          division-by-zero safeguards.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Clean event-driven Vanilla JavaScript architecture without using unsafe eval()
+                          execution.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span
+                        class="tech-tag">JavaScript</span><span class="tech-tag">CSS Grid</span><span
+                        class="tech-tag">Glassmorphism</span><span class="tech-tag">Local Storage</span><span
+                        class="tech-tag">UI/UX</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://github.com/rahulg2004/OIBSIP-Project-1-WebDev-L2-Calculator-rahul-gupta"
+                        target="_blank" rel="noopener noreferrer" class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        GitHub Repository &rarr;
+                      </a>
+                      <a href="assets/projects/calculator_demo.mp4" target="_blank" rel="noopener noreferrer"
+                        class="btn-project-demo" title="Watch Demo Video (Opens in new tab)">
+                        <span class="demo-play-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                          </svg>
+                        </span>
+                        Watch Demo Video &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+             COMPANY CAROUSEL: Sanatan Studios • Digital Media & Video Production Venture
+             ========================================================================== -->
+          <div class="project-carousel-section" id="carousel-section-sanatan" data-category="web" data-company="sanatan"
+            data-company-name="Sanatan Studios">
+            <div class="carousel-header-card glass-card">
+              <div class="carousel-header-left">
+                <div class="carousel-badge-row">
+                  <span class="carousel-flagship-badge">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Sanatan Studios
+                  </span>
+                  <span class="carousel-series-pill">Digital Media & Video Production Venture</span>
+                  <span class="project-date-badge">Jan 2023 – Present</span>
+                </div>
+                <h2 class="carousel-main-title">Sanatan Studios &mdash; <span class="highlight-cyan">Digital Media
+                    Ecosystem</span></h2>
+                <p class="carousel-main-subtitle">Full-scale YouTube digital content channel, high-CTR thumbnail
+                  branding, audience retention analytics, and video production architecture (13K+ subscribers, 1.5M+
+                  views).</p>
+              </div>
+              <div class="carousel-header-controls">
+                <div class="carousel-counter-box">
+                  <span>1</span>
+                  <span class="carousel-counter-sep">/</span>
+                  <span>1</span>
+                </div>
+                <div class="carousel-nav-buttons">
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Previous Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button type="button" class="carousel-nav-arrow disabled" aria-label="Next Project" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-viewport-wrapper">
+              <div class="carousel-track single-project-track" id="sanatan-track">
+                <div class="glass-card project-card-detailed" data-category="web"
+                  data-title="Sanatan Studios Digital Ecosystem 🎬 📈"
+                  data-org="YouTube Channel & Digital Media Venture"
+                  data-search="sanatan studios digital ecosystem 🎬 📈 youtube channel & digital media venture scaled digital media venture to 13,000+ subscribers and 1,500,000+ total views, generating ₹85,000+ in revenue through optimized end-to-end content production pipelines. youtube seo video production graphic design audience analytics after effects content strategy">
+                  <div>
+                    <div class="project-top-row">
+                      <span class="project-org-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        YouTube Channel & Digital Media Venture
+                      </span>
+                      <span class="project-date-badge">Apr 2023 – Present</span>
+                    </div>
+                    <h2 class="project-card-title">Sanatan Studios Digital Ecosystem 🎬 📈</h2>
+                    <p class="project-card-desc">Scaled digital media venture to 13,000+ subscribers and 1,500,000+
+                      total
+                      views, generating ₹85,000+ in revenue through optimized end-to-end content production pipelines.
+                    </p>
+                    <div class="project-key-points">
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Full content production lifecycle: topic research, scriptwriting, voice narration, video
+                          editing, and dynamic motion graphics.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>High-CTR visual design and YouTube algorithm search optimization driving consistent
+                          multi-million viewership.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Audience retention analysis and revenue monetization strategy producing ₹85,000+ in
+                          channel
+                          earnings.</span>
+                      </div>
+                      <div class="project-key-point">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span>Direct Channel Link: youtube.com/@SanatanStudios.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="project-bottom-row">
+                    <div class="tech-tags">
+                      <span class="tech-tag">YouTube SEO</span><span class="tech-tag">Video Production</span><span
+                        class="tech-tag">Graphic Design</span><span class="tech-tag">Audience Analytics</span><span
+                        class="tech-tag">After Effects</span><span class="tech-tag">Content Strategy</span>
+                    </div>
+                    <div class="project-action-buttons">
+                      <a href="https://www.youtube.com/@SanatanStudios" target="_blank" rel="noopener noreferrer"
+                        class="btn-project-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                        View Channel &rarr;
+                      </a>
+                      <span class="demo-video-pill" title="Demo video will be uploaded soon">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                        Demo Video Coming Soon
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-cta-box" style="margin-top: 36px;">
+          <a href="experience.html" class="btn btn-secondary">
+            &larr; View Experience
+          </a>
+          <a href="certificates.html" class="btn btn-primary">
+            View Certifications &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-logo">
+          <img src="assets/logo.jpg" alt="Rahul Gupta" class="logo-avatar" />
+          <span class="logo-text">Rahul Gupta</span>
+        </div>
+        <div class="footer-copy">&copy; 2026 Rahul Gupta. All rights reserved.</div>
+        <div class="footer-right">
+          <nav class="footer-links">
+            <a href="index.html#home">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="projects.html">Projects</a>
+            <a href="certificates.html">Certificates</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+          <a href="#" class="btn-back-to-top" aria-label="Back to Top">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main Animation Canvas Script -->
+  <script src="script.js"></script>
+
+<script>
+    // ==========================================================================
+    // Interactive Project Carousel Initializer
+    // ==========================================================================
+    function setupProjectCarousel(cfg) {
+      const track = document.getElementById(cfg.trackId);
+      if (!track) return;
+
+      const prevBtn = document.getElementById(cfg.prevBtnId);
+      const nextBtn = document.getElementById(cfg.nextBtnId);
+      const edgePrevBtn = document.getElementById(cfg.edgePrevBtnId);
+      const edgeNextBtn = document.getElementById(cfg.edgeNextBtnId);
+      const pillPrevBtn = document.getElementById(cfg.pillPrevBtnId);
+      const pillNextBtn = document.getElementById(cfg.pillNextBtnId);
+      const counterCurrent = document.getElementById(cfg.counterId);
+      const tabBtns = document.querySelectorAll(cfg.tabBtnsSelector);
+      const dots = document.querySelectorAll(cfg.dotsSelector);
+      const cards = track.querySelectorAll('.project-card-detailed');
+
+      const totalSlides = cards.length;
+      if (totalSlides <= 1) {
+        if (cards[0]) cards[0].classList.add('perspective-active');
+        return;
+      }
+
+      let currentIndex = 0;
+
+      function updatePerspective(nextIndex) {
+        currentIndex = Math.max(0, Math.min(totalSlides - 1, nextIndex));
+
+        cards.forEach((card, index) => {
+          card.classList.remove('perspective-active', 'perspective-prev', 'perspective-next', 'perspective-far');
+          const diff = index - currentIndex;
+
+          if (diff === 0) {
+            card.classList.add('perspective-active');
+          } else if (diff === -1) {
+            card.classList.add('perspective-prev');
+          } else if (diff === 1) {
+            card.classList.add('perspective-next');
+          } else {
+            card.classList.add('perspective-far');
+          }
+        });
+
+        // Center the active card in the viewport
+        if (cards[currentIndex]) {
+          const card = cards[currentIndex];
+          const targetScroll = card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
+          track.scrollTo({
+            left: Math.max(0, targetScroll),
+            behavior: 'smooth'
+          });
+        }
+
+        if (counterCurrent) {
+          counterCurrent.textContent = currentIndex + 1;
+        }
+
+        tabBtns.forEach((btn, i) => {
+          btn.classList.toggle('active', i === currentIndex);
+        });
+
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+
+        const isPrevDisabled = currentIndex === 0;
+        const isNextDisabled = currentIndex === totalSlides - 1;
+
+        [prevBtn, edgePrevBtn, pillPrevBtn].forEach(b => {
+          if (b) {
+            b.disabled = isPrevDisabled;
+            b.classList.toggle('disabled', isPrevDisabled);
+          }
+        });
+
+        [nextBtn, edgeNextBtn, pillNextBtn].forEach(b => {
+          if (b) {
+            b.disabled = isNextDisabled;
+            b.classList.toggle('disabled', isNextDisabled);
+          }
+        });
+      }
+
+      function handlePrev() {
+        if (currentIndex > 0) {
+          updatePerspective(currentIndex - 1);
+        }
+      }
+
+      function handleNext() {
+        if (currentIndex < totalSlides - 1) {
+          updatePerspective(currentIndex + 1);
+        }
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', handlePrev);
+      if (nextBtn) nextBtn.addEventListener('click', handleNext);
+      if (edgePrevBtn) edgePrevBtn.addEventListener('click', handlePrev);
+      if (edgeNextBtn) edgeNextBtn.addEventListener('click', handleNext);
+      if (pillPrevBtn) pillPrevBtn.addEventListener('click', handlePrev);
+      if (pillNextBtn) pillNextBtn.addEventListener('click', handleNext);
+
+      // Click card directly to center it (with explicit link click protection)
+      cards.forEach((card, index) => {
+        // Protect all links and buttons from being intercepted
+        card.querySelectorAll('a, button, .btn-project-github, .btn-project-demo').forEach(el => {
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+          });
+        });
+
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.project-action-buttons')) return;
+          if (index !== currentIndex) {
+            e.preventDefault();
+            updatePerspective(index);
+          }
+        });
+      });
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const slideIndex = parseInt(btn.getAttribute('data-slide'), 10);
+          updatePerspective(slideIndex);
+        });
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          updatePerspective(index);
+        });
+      });
+
+      track.setAttribute('tabindex', '0');
+      track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          handlePrev();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          handleNext();
+        }
+      });
+
+      // Initial active perspective state
+      updatePerspective(0);
+    }
+
+    // Initialize all 4 multi-project company carousels
+    function initProjectCarousels() {
+      setupProjectCarousel({
+        trackId: 'decodelabs-track',
+        prevBtnId: 'decodelabs-btn-prev',
+        nextBtnId: 'decodelabs-btn-next',
+        edgePrevBtnId: 'decodelabs-edge-prev',
+        edgeNextBtnId: 'decodelabs-edge-next', pillPrevBtnId: 'decodelabs-pill-prev', pillNextBtnId: 'decodelabs-pill-next',
+        counterId: 'decodelabs-current-index',
+        tabBtnsSelector: '#decodelabs-tabs .carousel-tab-btn',
+        dotsSelector: '#decodelabs-dots .carousel-dot'
+      });
+
+      setupProjectCarousel({
+        trackId: 'dataalcott-track',
+        prevBtnId: 'dataalcott-btn-prev',
+        nextBtnId: 'dataalcott-btn-next',
+        edgePrevBtnId: 'dataalcott-edge-prev',
+        edgeNextBtnId: 'dataalcott-edge-next', pillPrevBtnId: 'dataalcott-pill-prev', pillNextBtnId: 'dataalcott-pill-next',
+        counterId: 'dataalcott-current-index',
+        tabBtnsSelector: '#dataalcott-tabs .carousel-tab-btn',
+        dotsSelector: '#dataalcott-dots .carousel-dot'
+      });
+
+      setupProjectCarousel({
+        trackId: 'yuvaintern-track',
+        prevBtnId: 'yuvaintern-btn-prev',
+        nextBtnId: 'yuvaintern-btn-next',
+        edgePrevBtnId: 'yuvaintern-edge-prev',
+        edgeNextBtnId: 'yuvaintern-edge-next', pillPrevBtnId: 'yuvaintern-pill-prev', pillNextBtnId: 'yuvaintern-pill-next',
+        counterId: 'yuvaintern-current-index',
+        tabBtnsSelector: '#yuvaintern-tabs .carousel-tab-btn',
+        dotsSelector: '#yuvaintern-dots .carousel-dot'
+      });
+
+      setupProjectCarousel({
+        trackId: 'thiranex-track',
+        prevBtnId: 'thiranex-btn-prev',
+        nextBtnId: 'thiranex-btn-next',
+        edgePrevBtnId: 'thiranex-edge-prev',
+        edgeNextBtnId: 'thiranex-edge-next', pillPrevBtnId: 'thiranex-pill-prev', pillNextBtnId: 'thiranex-pill-next',
+        counterId: 'thiranex-current-index',
+        tabBtnsSelector: '#thiranex-tabs .carousel-tab-btn',
+        dotsSelector: '#thiranex-dots .carousel-dot'
+      });
+    }
+
+    // ==========================================================================
+    // Unified Project Filter & Search Logic
+    // ==========================================================================
+    function initProjectFilters() {
+      const searchInput = document.getElementById('project-search-input');
+      const filterBtns = document.querySelectorAll('.project-filter-btn');
+      const sections = document.querySelectorAll('.project-carousel-section');
+      const countEl = document.getElementById('visible-projects-count');
+
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function applyProjectFilters() {
+        let totalVisible = 0;
+
+        sections.forEach(section => {
+          const secCategory = (section.getAttribute('data-category') || '').toLowerCase();
+          const secCompany = (section.getAttribute('data-company-name') || '').toLowerCase();
+          const cards = section.querySelectorAll('.project-card-detailed');
+          let sectionVisibleCount = 0;
+
+          cards.forEach(card => {
+            const cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
+            const searchMeta = (card.getAttribute('data-search') || '').toLowerCase();
+            const cardText = card.textContent.toLowerCase();
+
+            const matchesCategory = (currentCategory === 'all' || secCategory === currentCategory || cardCategory === currentCategory);
+            const matchesQuery = (!currentQuery || searchMeta.includes(currentQuery) || secCompany.includes(currentQuery) || cardText.includes(currentQuery));
+
+            if (matchesCategory && matchesQuery) {
+              card.classList.remove('hidden');
+              sectionVisibleCount++;
+              totalVisible++;
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+
+          if (sectionVisibleCount > 0) {
+            section.classList.remove('hidden');
+          } else {
+            section.classList.add('hidden');
+          }
+        });
+
+        if (countEl) {
+          countEl.textContent = totalVisible;
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = (btn.getAttribute('data-filter') || 'all').toLowerCase();
+          applyProjectFilters();
+        });
+      });
+
+      if (searchInput) {
+        // Real-time search
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          applyProjectFilters();
+        });
+
+        // Safe Escape key handling to clear search
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            searchInput.value = '';
+            currentQuery = '';
+            applyProjectFilters();
+            searchInput.blur();
+          }
+        });
+      }
+
+      applyProjectFilters();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        initProjectCarousels();
+        initProjectFilters();
+      });
+    } else {
+      initProjectCarousels();
+      initProjectFilters();
+    }
+  </script>
+
+
+</body>
+
+</html>
